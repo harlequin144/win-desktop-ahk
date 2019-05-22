@@ -33,3 +33,8 @@ Return
 ;    MsgBox, Diffmerge window was found. 
 ;    WinClose, SourceGear DiffMerge - Registration Information
 ; }
+
+; stop the stupid ESC closing behavour of the IM windows
+#IfWinActive ahk_class LyncConversationWindowClass
+Escape::return
+#IfWinActive
